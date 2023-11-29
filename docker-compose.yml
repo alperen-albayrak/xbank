@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  db:
+    ports:
+      - "8001:5432"
+    image: postgres:latest
+    volumes:
+      - pg_data:/var/lib/postgresql/data/
+    environment:
+      - "POSTGRES_PASSWORD=[PASSWORD]"
+  web:
+    build: .
+    command:  bash -c "python /xbank/manage.py makemigrations transactions users && python /xbank/manage.py migrate && python /xbank/manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/xbank
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+volumes:
+  pg_data:
+    driver: local

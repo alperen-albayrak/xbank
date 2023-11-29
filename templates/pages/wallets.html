@@ -1,0 +1,110 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid py-4">
+  <div class="row">
+    <div class="col-12">
+      <div class="card mb-4">
+          <div class="d-flex flex-row ">
+              <div class="card-header pb-0" >
+                <h6>Wallets</h6>
+                </div>
+              <div class="offset-8 p-3">
+                  <a class="btn bg-gradient-dark mb-0 position-relative top-0" href={% url 'add-wallet' %}><i class="fas fa-plus"></i>&nbsp;Add New Wallet</a>
+                </div>
+          </div>
+
+
+        <div class="card-body px-0 pt-0 pb-2">
+          <div class="table-responsive p-0">
+            <table class="table align-items-center justify-content-center mb-0">
+              <thead>
+                <tr>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Wallet Name</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Wallet Id</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Balance</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Currency</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for wallet in wallets %}
+                  <tr>
+                  <td>
+                    <div class="d-flex px-2">
+                      {% comment %}<div>
+                        <img src="{% static 'img/small-logos/logo-spotify.svg' %}" class="avatar avatar-sm rounded-circle me-2" alt="spotify">
+                      </div>{% endcomment %}
+                      <div class="my-auto">
+                        <h6 class="mb-0 text-sm">{{ wallet.name }}</h6>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p class="text-sm font-weight-bold mb-0">{{wallet.id}}</p>
+                  </td>
+                  <td>
+                    <p class="text-sm font-weight-bold mb-0">{{wallet.expendable_balance}} / {{ wallet.balance }}</p>
+                  </td>
+                  <td>
+                    <span class="text-xs font-weight-bold">{{ wallet.currency }}</span>
+                  </td>
+                  <td class="align-middle">
+                    <button class="btn btn-link text-secondary mb-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-ellipsis-v cursor-pointer"></i>
+                    </button>
+                      <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
+            <li class="mb-2">
+              <a class="dropdown-item border-radius-md" href={% url 'edit-wallet' wallet.id %}>
+                <div class="d-flex py-1">
+                  <div class="my-auto">
+                      <i class="fa fa-edit cursor-pointer me-3"></i>
+                    {% comment %}<img src="{% static 'img/small-logos/logo-spotify.svg' %}" class="avatar avatar-sm bg-gradient-dark  me-3 ">{% endcomment %}
+                  </div>
+                  <div class="d-flex flex-column justify-content-center">
+                    <h6 class="text-sm font-weight-normal mb-1">
+                      <span class="font-weight-bold">Edit wallet</span>
+                    </h6>
+                    {% comment %}<p class="text-xs text-secondary mb-0 ">
+                      <i class="fa fa-clock me-1"></i>
+                      1 day
+                    </p>{% endcomment %}
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="dropdown-item border-radius-md" href={% url 'delete-wallet' wallet.id %}>
+                <div class="d-flex py-1">
+                  <div class="my-auto">
+                      <i class="fa fa-trash cursor-pointer me-3"></i>
+                    {% comment %}<img src="{% static 'img/team-2.jpg' %}" class="avatar avatar-sm  me-3 ">{% endcomment %}
+                  </div>
+                  <div class="d-flex flex-column justify-content-center">
+                    <h6 class="text-sm font-weight-normal mb-1">
+                      <span class="font-weight-bold">Delete wallet</span>
+                    </h6>
+                    {% comment %}<p class="text-xs text-secondary mb-0 ">
+                      <i class="fa fa-clock me-1"></i>
+                      13 minutes ago
+                    </p>{% endcomment %}
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+                  </td>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include "includes/footer.html" %}
+  </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="471" viewBox="0 0 1440 471">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_7058" data-name="Rectangle 7058" width="1440" height="471" transform="translate(0 4526)" fill="#fff"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="2.283" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#12121c" stop-opacity="0"/>
+      <stop offset="0.542" stop-color="#3d2a82" stop-opacity="0.541"/>
+      <stop offset="1" stop-color="#623fd8"/>
+    </linearGradient>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_7059" data-name="Rectangle 7059" width="1169" height="673" rx="33" transform="translate(136 478)" fill="#1d1b24"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_196" data-name="Mask Group 196" transform="translate(0 -4526)" clip-path="url(#clip-path)">
+    <path id="Path_49019" data-name="Path 49019" d="M0,0H1440V1176.936H0Z" transform="translate(-1 4100.715)" fill="url(#linear-gradient)"/>
+    <g id="Mask_Group_197" data-name="Mask Group 197" transform="translate(-49 4048)" clip-path="url(#clip-path-2)">
+      <g id="Group_12140" data-name="Group 12140">
+        <g id="Group_12128" data-name="Group 12128" transform="translate(124 448.066)">
+          <g id="Group_12118" data-name="Group 12118" transform="translate(-3 21)">
+            <path id="Polygon_653" data-name="Polygon 653" d="M1.5,0,3,7H0Z" transform="translate(326 236)" fill="#33324d"/>
+            <path id="Polygon_654" data-name="Polygon 654" d="M1.5,0,3,7H0Z" transform="translate(329 250) rotate(180)" fill="#33324d"/>
+            <path id="Polygon_655" data-name="Polygon 655" d="M1.5,0,3,7H0Z" transform="matrix(-0.035, 0.999, -0.999, -0.035, 335.05, 241.623)" fill="#33324d"/>
+            <path id="Polygon_656" data-name="Polygon 656" d="M1.5,0,3,7H0Z" transform="matrix(-0.035, -0.999, 0.999, -0.035, 320.504, 244.621)" fill="#33324d"/>
+          </g>
+          <g id="Group_12119" data-name="Group 12119" transform="translate(-155.669 501)">
+            <path id="Polygon_657" data-name="Polygon 657" d="M1.5,0,3,7H0Z" transform="translate(326 236)" fill="#33324d"/>
+            <path id="Polygon_658" data-name="Polygon 658" d="M1.5,0,3,7H0Z" transform="translate(329 250) rotate(180)" fill="#33324d"/>
+            <path id="Polygon_659" data-name="Polygon 659" d="M1.5,0,3,7H0Z" transform="matrix(-0.035, 0.999, -0.999, -0.035, 335.05, 241.623)" fill="#33324d"/>
+            <path id="Polygon_660" data-name="Polygon 660" d="M1.5,0,3,7H0Z" transform="matrix(-0.035, -0.999, 0.999, -0.035, 320.504, 244.621)" fill="#33324d"/>
+          </g>
+          <g id="Group_12122" data-name="Group 12122" transform="translate(-90.626 -111.745)">
+            <path id="Polygon_669" data-name="Polygon 669" d="M.831,0l.831,3.324H0Z" transform="translate(323.392 236.199)" fill="#33324d"/>
+            <path id="Polygon_670" data-name="Polygon 670" d="M.831,0l.831,4.155H0Z" transform="translate(325.054 243.678) rotate(180)" fill="#33324d"/>
+            <path id="Polygon_671" data-name="Polygon 671" d="M.819,0l.819,3.822H0Z" transform="matrix(-0.035, 0.999, -0.999, -0.035, 328.4, 239.104)" fill="#33324d"/>
+            <path id="Polygon_672" data-name="Polygon 672" d="M.819,0l.819,3.822H0Z" transform="matrix(-0.035, -0.999, 0.999, -0.035, 320.457, 240.741)" fill="#33324d"/>
+          </g>
+          <g id="Group_12123" data-name="Group 12123" transform="translate(11.65 590.255)">
+            <path id="Polygon_673" data-name="Polygon 673" d="M.831,0l.831,3.324H0Z" transform="translate(323.392 236.199)" fill="#33324d"/>
+            <path id="Polygon_674" data-name="Polygon 674" d="M.831,0l.831,4.155H0Z" transform="translate(325.054 243.678) rotate(180)" fill="#33324d"/>
+            <path id="Polygon_675" data-name="Polygon 675" d="M.819,0l.819,3.822H0Z" transform="matrix(-0.035, 0.999, -0.999, -0.035, 328.4, 239.104)" fill="#33324d"/>
+            <path id="Polygon_676" data-name="Polygon 676" d="M.819,0l.819,3.822H0Z" transform="matrix(-0.035, -0.999, 0.999, -0.035, 320.457, 240.741)" fill="#33324d"/>
+          </g>
+          <g id="Group_12124" data-name="Group 12124" transform="translate(-237.626 8.301)">
+            <path id="Polygon_677" data-name="Polygon 677" d="M1,0,2,4H0Z" transform="translate(324 236.199)" fill="#33324d"/>
+            <path id="Polygon_678" data-name="Polygon 678" d="M1,0,2,5H0Z" transform="translate(326 245.199) rotate(180)" fill="#33324d"/>
+            <path id="Polygon_679" data-name="Polygon 679" d="M.986,0l.986,4.6H0Z" transform="matrix(-0.035, 0.999, -0.999, -0.035, 330.026, 239.695)" fill="#33324d"/>
+            <path id="Polygon_680" data-name="Polygon 680" d="M.986,0l.986,4.6H0Z" transform="matrix(-0.035, -0.999, 0.999, -0.035, 320.469, 241.665)" fill="#33324d"/>
+          </g>
+          <g id="Group_12125" data-name="Group 12125" transform="translate(211.374 476.301)">
+            <path id="Polygon_681" data-name="Polygon 681" d="M1,0,2,4H0Z" transform="translate(324 236.199)" fill="#33324d"/>
+            <path id="Polygon_682" data-name="Polygon 682" d="M1,0,2,5H0Z" transform="translate(326 245.199) rotate(180)" fill="#33324d"/>
+            <path id="Polygon_683" data-name="Polygon 683" d="M.986,0l.986,4.6H0Z" transform="matrix(-0.035, 0.999, -0.999, -0.035, 330.026, 239.695)" fill="#33324d"/>
+            <path id="Polygon_684" data-name="Polygon 684" d="M.986,0l.986,4.6H0Z" transform="matrix(-0.035, -0.999, 0.999, -0.035, 320.469, 241.665)" fill="#33324d"/>
+          </g>
+          <g id="Group_12126" data-name="Group 12126" transform="translate(150.374 316.302)">
+            <path id="Polygon_685" data-name="Polygon 685" d="M.623,0l.623,2.493H0Z" transform="translate(322.644 236.199)" fill="#33324d"/>
+            <path id="Polygon_686" data-name="Polygon 686" d="M.623,0l.623,3.116H0Z" transform="translate(323.89 241.809) rotate(180)" fill="#33324d"/>
+            <path id="Polygon_687" data-name="Polygon 687" d="M.614,0l.614,2.867H0Z" transform="matrix(-0.035, 0.999, -0.999, -0.035, 326.4, 238.378)" fill="#33324d"/>
+            <path id="Polygon_688" data-name="Polygon 688" d="M.614,0l.614,2.867H0Z" transform="matrix(-0.035, -0.999, 0.999, -0.035, 320.443, 239.606)" fill="#33324d"/>
+          </g>
+          <g id="Group_12127" data-name="Group 12127" transform="translate(-207.813 303.301)">
+            <path id="Polygon_689" data-name="Polygon 689" d="M1,0,2,4H0Z" transform="translate(324 236.199)" fill="#33324d"/>
+            <path id="Polygon_690" data-name="Polygon 690" d="M1,0,2,5H0Z" transform="translate(326 245.199) rotate(180)" fill="#33324d"/>
+            <path id="Polygon_691" data-name="Polygon 691" d="M.986,0l.986,4.6H0Z" transform="matrix(-0.035, 0.999, -0.999, -0.035, 330.026, 239.695)" fill="#33324d"/>
+            <path id="Polygon_692" data-name="Polygon 692" d="M.986,0l.986,4.6H0Z" transform="matrix(-0.035, -0.999, 0.999, -0.035, 320.469, 241.665)" fill="#33324d"/>
+          </g>
+        </g>
+        <g id="Group_12139" data-name="Group 12139" transform="translate(707.016 510.422)">
+          <g id="Group_12129" data-name="Group 12129" transform="translate(-3 21)">
+            <path id="Polygon_693" data-name="Polygon 693" d="M1.5,0,3,7H0Z" transform="translate(326 236)" fill="#33324d"/>
+            <path id="Polygon_694" data-name="Polygon 694" d="M1.5,0,3,7H0Z" transform="translate(329 250) rotate(180)" fill="#33324d"/>
+            <path id="Polygon_695" data-name="Polygon 695" d="M1.5,0,3,7H0Z" transform="matrix(-0.035, 0.999, -0.999, -0.035, 335.05, 241.623)" fill="#33324d"/>
+            <path id="Polygon_696" data-name="Polygon 696" d="M1.5,0,3,7H0Z" transform="matrix(-0.035, -0.999, 0.999, -0.035, 320.504, 244.621)" fill="#33324d"/>
+          </g>
+          <g id="Group_12130" data-name="Group 12130" transform="translate(-155.669 501)">
+            <path id="Polygon_697" data-name="Polygon 697" d="M1.5,0,3,7H0Z" transform="translate(326 236)" fill="#33324d"/>
+            <path id="Polygon_698" data-name="Polygon 698" d="M1.5,0,3,7H0Z" transform="translate(329 250) rotate(180)" fill="#33324d"/>
+            <path id="Polygon_699" data-name="Polygon 699" d="M1.5,0,3,7H0Z" transform="matrix(-0.035, 0.999, -0.999, -0.035, 335.05, 241.623)" fill="#33324d"/>
+            <path id="Polygon_700" data-name="Polygon 700" d="M1.5,0,3,7H0Z" transform="matrix(-0.035, -0.999, 0.999, -0.035, 320.504, 244.621)" fill="#33324d"/>
+          </g>
+          <g id="Group_12131" data-name="Group 12131" transform="translate(221 -82.199)">
+            <path id="Polygon_701" data-name="Polygon 701" d="M1.247,0,2.493,4.986H0Z" transform="translate(324.888 236.199)" fill="#33324d"/>
+            <path id="Polygon_702" data-name="Polygon 702" d="M1.247,0,2.493,6.233H0Z" transform="translate(327.381 247.418) rotate(180)" fill="#33324d"/>
+            <path id="Polygon_703" data-name="Polygon 703" d="M1.229,0,2.457,5.734H0Z" transform="matrix(-0.035, 0.999, -0.999, -0.035, 332.4, 240.557)" fill="#33324d"/>
+            <path id="Polygon_704" data-name="Polygon 704" d="M1.229,0,2.457,5.733H0Z" transform="matrix(-0.035, -0.999, 0.999, -0.035, 320.485, 243.012)" fill="#33324d"/>
+          </g>
+          <g id="Group_12132" data-name="Group 12132" transform="translate(211.374 63.255)">
+            <path id="Polygon_705" data-name="Polygon 705" d="M1,0,2,4H0Z" transform="translate(324 236.199)" fill="#33324d"/>
+            <path id="Polygon_706" data-name="Polygon 706" d="M1,0,2,5H0Z" transform="translate(326 245.199) rotate(180)" fill="#33324d"/>
+            <path id="Polygon_707" data-name="Polygon 707" d="M.986,0l.986,4.6H0Z" transform="matrix(-0.035, 0.999, -0.999, -0.035, 330.026, 239.695)" fill="#33324d"/>
+            <path id="Polygon_708" data-name="Polygon 708" d="M.986,0l.986,4.6H0Z" transform="matrix(-0.035, -0.999, 0.999, -0.035, 320.469, 241.665)" fill="#33324d"/>
+          </g>
+          <g id="Group_12134" data-name="Group 12134" transform="translate(11.65 590.255)">
+            <path id="Polygon_713" data-name="Polygon 713" d="M.831,0l.831,3.324H0Z" transform="translate(323.392 236.199)" fill="#33324d"/>
+            <path id="Polygon_714" data-name="Polygon 714" d="M.831,0l.831,4.155H0Z" transform="translate(325.054 243.678) rotate(180)" fill="#33324d"/>
+            <path id="Polygon_715" data-name="Polygon 715" d="M.819,0l.819,3.822H0Z" transform="matrix(-0.035, 0.999, -0.999, -0.035, 328.4, 239.104)" fill="#33324d"/>
+            <path id="Polygon_716" data-name="Polygon 716" d="M.819,0l.819,3.822H0Z" transform="matrix(-0.035, -0.999, 0.999, -0.035, 320.457, 240.741)" fill="#33324d"/>
+          </g>
+          <g id="Group_12136" data-name="Group 12136" transform="translate(211.374 476.301)">
+            <path id="Polygon_721" data-name="Polygon 721" d="M1,0,2,4H0Z" transform="translate(324 236.199)" fill="#33324d"/>
+            <path id="Polygon_722" data-name="Polygon 722" d="M1,0,2,5H0Z" transform="translate(326 245.199) rotate(180)" fill="#33324d"/>
+            <path id="Polygon_723" data-name="Polygon 723" d="M.986,0l.986,4.6H0Z" transform="matrix(-0.035, 0.999, -0.999, -0.035, 330.026, 239.695)" fill="#33324d"/>
+            <path id="Polygon_724" data-name="Polygon 724" d="M.986,0l.986,4.6H0Z" transform="matrix(-0.035, -0.999, 0.999, -0.035, 320.469, 241.665)" fill="#33324d"/>
+          </g>
+          <g id="Group_12137" data-name="Group 12137" transform="translate(150.374 316.302)">
+            <path id="Polygon_725" data-name="Polygon 725" d="M.623,0l.623,2.493H0Z" transform="translate(322.644 236.199)" fill="#33324d"/>
+            <path id="Polygon_726" data-name="Polygon 726" d="M.623,0l.623,3.116H0Z" transform="translate(323.89 241.809) rotate(180)" fill="#33324d"/>
+            <path id="Polygon_727" data-name="Polygon 727" d="M.614,0l.614,2.867H0Z" transform="matrix(-0.035, 0.999, -0.999, -0.035, 326.4, 238.378)" fill="#33324d"/>
+            <path id="Polygon_728" data-name="Polygon 728" d="M.614,0l.614,2.867H0Z" transform="matrix(-0.035, -0.999, 0.999, -0.035, 320.443, 239.606)" fill="#33324d"/>
+          </g>
+          <g id="Group_12138" data-name="Group 12138" transform="translate(-207.813 303.301)">
+            <path id="Polygon_729" data-name="Polygon 729" d="M1,0,2,4H0Z" transform="translate(324 236.199)" fill="#33324d"/>
+            <path id="Polygon_730" data-name="Polygon 730" d="M1,0,2,5H0Z" transform="translate(326 245.199) rotate(180)" fill="#33324d"/>
+            <path id="Polygon_731" data-name="Polygon 731" d="M.986,0l.986,4.6H0Z" transform="matrix(-0.035, 0.999, -0.999, -0.035, 330.026, 239.695)" fill="#33324d"/>
+            <path id="Polygon_732" data-name="Polygon 732" d="M.986,0l.986,4.6H0Z" transform="matrix(-0.035, -0.999, 0.999, -0.035, 320.469, 241.665)" fill="#33324d"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

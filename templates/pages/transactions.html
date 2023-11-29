@@ -1,0 +1,131 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid py-4">
+  <div class="row">
+    <div class="col-12">
+      <div class="card mb-4">
+          <div class="d-flex flex-row ">
+              <div class="card-header pb-0" >
+                <h6>Transactions</h6>
+                </div>
+              <div class="offset-8 p-3">
+                  <a class="btn bg-gradient-dark mb-0 position-relative top-0" href={% url 'make-transaction' %}><i class="fas fa-plus"></i>&nbsp;Make Transaction</a>
+                </div>
+          </div>
+
+
+        <div class="card-body px-0 pt-0 pb-2">
+          <div class="table-responsive p-0">
+            <table class="table align-items-center mb-0">
+              <thead>
+                <tr>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Details</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Amount</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Date Time</th>
+                </tr>
+              </thead>
+              <tbody>
+
+              {% for transaction in transactions %}
+                  {% if transaction.from_wallet.person.user == request.user %}
+                    <tr>
+                  <td>
+                    <div class="d-flex px-2 py-1">
+                      {% comment %}<div>
+                        <img src="{% static 'img/team-2.jpg' %}" class="avatar avatar-sm me-3" alt="user1">
+                      </div>{% endcomment %}
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="mb-0 text-sm">{{ transaction.to_wallet.person.user.get_full_name }}</h6>
+                        <p class="text-xs text-secondary mb-0">{{ transaction.description }}</p>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                      <h6 class="mb-0 text-sm text-danger">{{ transaction.amount }} {{ transaction.to_wallet.currency }}</h6>
+
+                    {% comment %}<p class="text-xs text-secondary mb-0">Organization</p>{% endcomment %}
+                  </td>
+
+                  <td class="align-middle text-center text-sm">
+                      {% if  transaction.status == "CMT" %}
+                          <span class="badge badge-sm bg-gradient-secondary">COMPLETED</span>
+                      {% elif transaction.status == "CCL" %}
+                          <span class="badge badge-sm bg-gradient-secondary">CANCELED</span>
+                          {% elif transaction.status == "WAT" %}
+                          <span class="badge badge-sm bg-gradient-success">
+                              <a class="text-white" href={% url 'cancel-transaction' transaction.id %}> CANCELABLE</a>
+                          </span>
+                      {% endif %}
+                  </td>
+
+
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">{{ transaction.timestamp }}</span>
+                  </td>
+                    {% comment %}
+                  <td class="align-middle text-center">
+                      <span class="text-secondary text-xs font-weight-bold">10:50:32</span>
+                    <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                      Edit
+                    </a>
+                  </td>
+                    {% endcomment %}
+                </tr>
+                  {% else %}
+                  <tr>
+                  <td>
+                    <div class="d-flex px-2 py-1">
+                      {% comment %}<div>
+                        <img src="{% static 'img/team-2.jpg' %}" class="avatar avatar-sm me-3" alt="user1">
+                      </div>{% endcomment %}
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="mb-0 text-sm">{{ transaction.from_wallet.person.user.get_full_name }}</h6>
+                        <p class="text-xs text-secondary mb-0">{{ transaction.description }}</p>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                      <h6 class="mb-0 text-sm text-success">{{ transaction.amount }} {{ transaction.to_wallet.currency }}</h6>
+
+                    {% comment %}<p class="text-xs text-secondary mb-0">Organization</p>{% endcomment %}
+                  </td>
+                  <td class="align-middle text-center text-sm">
+                    {% if  transaction.status == "CMT" %}
+                        <span class="badge badge-sm bg-gradient-secondary">COMPLETED</span>
+                    {% elif transaction.status == "CCL" %}
+                        <span class="badge badge-sm bg-gradient-secondary">CANCELED</span>
+                    {% elif transaction.status == "WAT" %}
+                        <span class="badge badge-sm bg-gradient-danger">BLOCKED</span>
+                    {% endif %}
+                  </td>
+                  <td class="align-middle text-center">
+                    <span class="text-secondary text-xs font-weight-bold">{{ transaction.timestamp }}</span>
+                  </td>
+                    {% comment %}
+                  <td class="align-middle text-center">
+                      <span class="text-secondary text-xs font-weight-bold">10:50:32</span>
+                    <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                      Edit
+                    </a>
+                  </td>
+                    {% endcomment %}
+                </tr>
+                  {% endif %}
+
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include "includes/footer.html" %}
+
+  </div>
+  {% endblock content %}

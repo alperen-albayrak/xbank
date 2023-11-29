@@ -1,0 +1,142 @@
+{% extends 'layouts/base.html' %}
+{% load i18n %}
+{% load admin_soft %}
+{% load static %}
+
+{% block content %}
+
+{% comment %}  {% include 'includes/navigation.html' %}{% endcomment %}
+
+  <main class="main-content  mt-0">
+    <section>
+      <div class="page-header min-vh-75">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
+              <div class="card card-plain mt-8">
+                <div class="card-header pb-0 text-left bg-transparent">
+                  <h3 class="font-weight-bolder text-info text-gradient">
+                      {{ form_name }}
+                  </h3>
+                  <p class="mb-0">
+                    {% if msg %}
+                      <span class="text-danger">{{ msg | safe }}</span>
+                    {% else %}
+                    {% endif %}                      
+                  </p>
+                </div>
+                <div class="card-body">
+
+                        
+                        <form role="form" method="post" action="#">
+
+                            {% csrf_token %}
+                              <label for="amount">Amount</label>
+                              <div class="mb-3">
+                                <input type="number" name="amount" min="0" required id="id_amount" class="form-control">
+                              </div>
+
+                            <label for="from_wallet">From Wallet</label>
+                              <div class="mb-3">
+                                <select name="from_wallet" required id="id_from_wallet" class="form-select">
+                                    {% for wallet in from_wallet_options %}
+                                      <option value="{{ wallet.id }}">{{ wallet.name }} || {{ wallet.expendable_balance }}/{{ wallet.balance }} ||
+                                          {{ wallet.currency }}</option>
+                                    {% endfor %}
+                                </select>
+                              </div>
+
+                            <label for="to_wallet">To Wallet</label>
+                              <div class="mb-3">
+                                <select name="to_wallet" required="" id="id_to_wallet" class="form-select">
+                                      {% for wallet in to_wallet_options %}
+                                      <option value="{{ wallet.id }}">{{ wallet.person.user.get_full_name }} || {{ wallet.expendable_balance }}/{{ wallet.balance }} ||
+                                          {{ wallet.currency }}</option>
+                                    {% endfor %}
+
+                                </select>
+                              </div>
+
+                            <label for="description">Description</label>
+                              <div class="mb-3">
+                                <input type="text" name="description" maxlength="50" required="" id="id_description" class="form-control">
+                              </div>
+
+                              <span class="text-danger">{{ field.errors }}</span>
+                            <div class="text-center">
+                              <button type="submit" class="btn bg-gradient-info w-100 mt-4 mb-0">{{ form_name }}</button>
+                            </div>
+                        </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="oblique position-absolute top-0 h-100 d-md-block d-none me-n8">
+                <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6" style="background-image:url('{% static 'img/curved-images/curved6.jpg' %}')"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <script type="text/javascript">
+    document.getElementById("formdata").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    to_wallet = document.getElementById("to_wallet").value;
+    from_wallet = document.getElementById("from_wallet").value;
+    amount = document.getElementById("amount").value
+    description = document.getElementById("description").value
+
+  const formData = new FormData();
+  //console.log(name);
+  formData.append('to_wallet', to_wallet);
+  formData.append('from_wallet', from_wallet);
+  formData.append('amount', amount);
+  formData.append('description', description);
+
+  formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
+
+  console.log(formData);
+
+  fetch('{% url "make-transaction" %}', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Success:', data);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+  });
+</script>
+
+{% endblock content %}
+
+{% block extrascript %}
+    <script type="application/javascript">
+        {% if user.is_authenticated %}
+            var msg = "You are authenticated as {{ username }}, but are not authorized to " +
+                "access this page.Would you like to login to a different account ?"
+            notification.warning(msg, 'top', 'right');
+        {% endif %}
+
+        {% if form.errors and not form.non_field_errors %}
+            {% if form.errors.items|length == 1 %}
+                notification.warning("{% trans "Please correct the error below." %}", 'top', 'right');
+            {% else %}
+                notification.warning("{% trans "Please correct the errors below." %}", 'top', 'right');
+            {% endif %}
+        {% endif %}
+
+        {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+                notification.warning("{{ error|clean_text }}", 'top', 'right');
+            {% endfor %}
+        {% endif %}
+    </script>
+{% endblock %}
